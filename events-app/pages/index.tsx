@@ -13,7 +13,9 @@ export default function Home() {
         <p className="py-4">
           <strong>Prompt:</strong> Display events sorted reverse
           chronologically, grouped by date. Within each group events should be
-          sorted chronologically. Each event type should render uniquely.
+          sorted chronologically. Each event type should render uniquely to
+          differentiate the types at a glance (e.g. using a different color, an
+          icon, etc).
         </p>
         <div className="relative">
           <div
@@ -30,9 +32,9 @@ export default function Home() {
         </div>
 
         <div className="overflow-hidden bg-white shadow sm:rounded-md mt-4">
-          <ul role="list" className="divide-y divide-gray-200">
+          <ol role="list" className="divide-y divide-gray-200">
             <li className="px-4 py-4 sm:px-6">First event</li>
-          </ul>
+          </ol>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ defmodule EventsApi.EventsFixtures do
         event_type: :new_listing,
         message: "some message",
         object: :listing,
-        occured_at: ~U[2022-10-18 00:13:00Z],
+        occurred_at: ~U[2022-10-18 00:13:00Z],
         target: "some target"
       })
       |> EventsApi.Events.create_event()

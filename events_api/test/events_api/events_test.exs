@@ -13,7 +13,7 @@ defmodule EventsApi.EventsTest do
       event_type: nil,
       message: nil,
       object: nil,
-      occured_at: nil,
+      occurred_at: nil,
       target: nil
     }
 
@@ -33,7 +33,7 @@ defmodule EventsApi.EventsTest do
         event_type: :new_listing,
         message: "some message",
         object: :listing,
-        occured_at: ~U[2022-10-18 00:13:00Z],
+        occurred_at: ~U[2022-10-18 00:13:00Z],
         target: "some target"
       }
 
@@ -42,7 +42,7 @@ defmodule EventsApi.EventsTest do
       assert event.event_type == :new_listing
       assert event.message == "some message"
       assert event.object == :listing
-      assert event.occured_at == ~U[2022-10-18 00:13:00Z]
+      assert event.occurred_at == ~U[2022-10-18 00:13:00Z]
       assert event.target == "some target"
     end
 
@@ -58,7 +58,7 @@ defmodule EventsApi.EventsTest do
         event_type: :modify_listing,
         message: "some updated message",
         object: :listing,
-        occured_at: ~U[2022-10-19 00:13:00Z],
+        occurred_at: ~U[2022-10-19 00:13:00Z],
         target: "some updated target"
       }
 
@@ -67,7 +67,7 @@ defmodule EventsApi.EventsTest do
       assert event.event_type == :modify_listing
       assert event.message == "some updated message"
       assert event.object == :listing
-      assert event.occured_at == ~U[2022-10-19 00:13:00Z]
+      assert event.occurred_at == ~U[2022-10-19 00:13:00Z]
       assert event.target == "some updated target"
     end
 

@@ -10,7 +10,7 @@ defmodule EventsApiWeb.SchemaTest do
       event_type
       message
       object
-      occured_at
+      occurred_at
       target
     }
   }
@@ -22,7 +22,7 @@ defmodule EventsApiWeb.SchemaTest do
       event_type: :new_listing,
       message: "Listed 1,000 shares of Merchant Guild",
       object: :listing,
-      occured_at: ~U[2022-10-18 00:13:00Z],
+      occurred_at: ~U[2022-10-18 00:13:00Z],
       target: "Merchant Guild"
     })
 
@@ -39,7 +39,7 @@ defmodule EventsApiWeb.SchemaTest do
                    "event_type" => "NEW_LISTING",
                    "message" => "Listed 1,000 shares of Merchant Guild",
                    "object" => "LISTING",
-                   "occured_at" => "2022-10-18T00:13:00Z",
+                   "occurred_at" => "2022-10-18T00:13:00Z",
                    "target" => "Merchant Guild"
                  }
                ]

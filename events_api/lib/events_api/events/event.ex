@@ -19,7 +19,7 @@ defmodule EventsApi.Events.Event do
 
     field :message, :string
     field :object, Ecto.Enum, values: [:listing, :bid]
-    field :occured_at, :utc_datetime
+    field :occurred_at, :utc_datetime
     field :target, :string
 
     timestamps()
@@ -28,7 +28,7 @@ defmodule EventsApi.Events.Event do
   @doc false
   def changeset(event, attrs) do
     event
-    |> cast(attrs, [:actor, :event_type, :message, :object, :occured_at, :target])
-    |> validate_required([:actor, :event_type, :message, :object, :occured_at, :target])
+    |> cast(attrs, [:actor, :event_type, :message, :object, :occurred_at, :target])
+    |> validate_required([:actor, :event_type, :message, :object, :occurred_at, :target])
   end
 end

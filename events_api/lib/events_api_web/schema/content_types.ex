@@ -7,7 +7,7 @@ defmodule EventsApiWeb.Schema.ContentTypes do
     field :event_type, :event_type
     field :message, :string
     field :object, :object
-    field :occured_at, :datetime
+    field :occurred_at, :datetime
     field :target, :string
   end
 

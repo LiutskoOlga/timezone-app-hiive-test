@@ -7,7 +7,10 @@ defmodule SeedHelpers do
   @random_dates for _ <- 1..30,
                     do: Faker.DateTime.between(~U[2022-01-01 00:00:00Z], ~U[2022-12-31 00:00:00Z])
 
-  def random_date, do: Enum.random(@random_dates)
+  def random_date do
+    date = @random_dates |> Enum.random() |> DateTime.to_date()
+    Faker.DateTime.between(DateTime.new!(date, ~T[00:00:00]), DateTime.new!(date, ~T[23:59:59]))
+  end
 
   def random_event_type do
     Enum.random(Ecto.Enum.values(Event, :event_type))
@@ -27,7 +30,7 @@ for _ <- 1..250 do
     event_type: event_type,
     message: Faker.StarWars.quote(),
     object: SeedHelpers.object(event_type),
-    occured_at: SeedHelpers.random_date(),
+    occurred_at: SeedHelpers.random_date(),
     target: Faker.UUID.v4()
   }
 
