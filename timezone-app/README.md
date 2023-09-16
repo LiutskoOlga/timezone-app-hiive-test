@@ -20,5 +20,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Testing
 
-To run tests, ensure that the development server is running in background. Then, run `yarn e2e` or `npm run e2e` to execute tests. If this is your first time running Playwright tests, you should run `yarn playwright install` to install browser binaries.
+To run tests, ensure that the development server is running in background. Then, run `npm run e2e` or `yarn e2e` to execute tests. If this is your first time running Playwright tests, you should run `npx playwright install` or `yarn playwright install` to install browser binaries.
 
